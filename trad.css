@@ -1,0 +1,202 @@
+body {
+    width: 100%;
+    background: #000;
+    display: flex;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .loading-bar {
+     z-index: 1;
+     font-family: 'Zen Dots', cursive;
+     color: rgb(252, 252, 252);
+     top: 45%;
+     left: 50%;
+     position: absolute;
+     transform: translate(-50%,-50%);
+     animation:rig 3s normal forwards;
+     text-shadow: 0 0 10px rgb(134, 207, 195),0 0 40px rgb(141, 219, 233),0 0 10px rgb(141, 219, 233);
+  }
+  .loading-bar h1 {
+     display: flex;
+     display: inline;
+    }  
+   @keyframes rig {
+   80%{
+       opacity:100%;
+    }
+     100%{ 
+         opacity: 0;
+    }
+   
+     
+  }
+  body {
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    display: flex;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .progress {
+    z-index:1 ;
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: absolute;
+    padding-top: 20px;
+    padding: 0 4px;
+    display: flex;
+    animation: load1 3s normal forwards;
+    height: 10px;
+    width: 500px;
+    
+  }
+  @keyframes load1 {
+    80%{
+        opacity:100%;
+     }
+      100%{ 
+          opacity: 0;
+     }
+}
+.progress-value {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px rgb(131, 32, 32),0 0 10px #ffff;
+    border-radius: 100px;
+    background: #fff;
+    height: 10px;
+    width: 0;
+  }
+  
+  @keyframes load {
+    0% { width: 0; }
+    80%{
+        opacity:100%;
+     }
+    100% { 
+        width: 100%;
+        opacity:0;
+   }
+  }
+
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
+  .white-orbit {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ffffff;
+  animation: spin3D 10s linear 0s infinite;
+ }
+ .green-orbit {
+  z-index: 6;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #a0b8aaea;
+  animation: spin3D 2s linear 0s infinite;
+  
+ }
+ @keyframes look {
+     0%{ opacity: 0;}
+     90%{ 
+        opacity:0;
+     }
+     100%{ opacity:100%}
+ }
+ .spinner-box {
+    z-index: 6;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    animation: noise 3.5s normal forwards;
+    margin-right: 10vh;
+  }
+
+ .leo {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+    
+  }
+ .red-orbit {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #ff91dee3;
+  animation: spin3D 1s linear 0s infinite;
+ } 
+ .w1 {
+    animation: spin3D 10s linear 0s infinite;
+
+ }
+ .blue-orbit {
+  width: 165px;
+  height: 165px;
+  border: 1px solid #91daffdc;
+  animation:spin3D 3s linear .2s infinite;
+ }
+ .w2 {
+    animation: spin3D 7s linear 0s infinite;
+  }
+  
+  .w3 {
+    animation: spin3D 4s linear 0s infinite;
+  }
+  .styled {
+    position: relative;
+    border: 0;
+    line-height: 2.5;
+    padding: 0.5em 1.5em;
+    font-size: 1rem;
+    margin: 10vh;
+    display: flex;
+    color: white;
+    text-shadow:  0 0 10px rgb(247, 247, 247);
+    border-radius: 3rem;
+   
+    background: black;
+    height: 50px;
+    width: 150px;
+    box-shadow: 0 0 5px #fff;
+    background-size:200%;
+    background-position: 100% ;
+    
+}
+.niquer{
+    -webkit-animation: noise 3.5s normal forwards;
+}
+.uh{
+    margin-left: 10px;
+}
+.uj{
+    margin-right: 10px;
+}
+
+  @keyframes noise{
+      0%{
+          opacity:0;
+      }
+      90%{
+        opacity:0;
+    }
+    100%{ opacity:100}
+  }
+.niquer :hover{
+    background: rgb(255, 255, 255);
+    color:black;
+}
